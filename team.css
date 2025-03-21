@@ -1,0 +1,139 @@
+@import'./c.css';
+/* 最後結尾的;很重要！！ */
+
+/* .titles {
+    position: relative;
+    height: 60px;
+} */
+
+/* .titles h1{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+} */
+
+
+/* 跑馬燈 */
+.box {
+    position: relative;
+    /* width: 1200px; 調整顯示範圍 */
+    height: 370px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    transition: transform 0.s ease;
+    /* 平滑過渡效果 */
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    margin-left: 5px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* border: none; 移除邊框 */
+    /* 或者你想要更改邊框顏色 */
+    /* border: 3px solid blue; */
+}
+
+
+/* .photos h1{
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* 標題 團隊成員 */
+.teamname {
+    background-color: antiquewhite;
+    color: grey;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    line-height: 5.0em;
+}
+
+
+.shop {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    /* 讓內容垂直置中對齊 */
+    gap: 10px;
+    /* 減少兩個區塊的間距 */
+    margin: 20px;
+    /* 減少整個 `.shop` 的外邊距 */
+    justify-content: space-between;
+
+    max-width: 1200px;
+    /* 限制最大寬度 */
+    width: 90%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 50px auto;
+    padding: 10px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+
+
+.info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ede9ed;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.info p {
+    background-color: chartreuse;
+    text-align: center;
+    line-height: 2em;
+}
+
+
+
+.team-imagesright {
+    /* background-color: aquamarine; */
+    width: 50%;
+}
+
+.team-imagesleft {
+    /* background-color: bisque; */
+    width: 50%;
+}
+
+.team-imagesright img {
+    background-color: blueviolet;
+    width: 80%;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -6px black;
+    display: block;
+    margin: auto;
+
+}
+
+.team-imagesleft img {
+    background-color: lightcoral;
+    width: 80%;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -6px black;
+    display: block;
+    margin: auto;
+}

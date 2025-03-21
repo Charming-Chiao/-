@@ -1,0 +1,112 @@
+@import'./c.css';
+/* 最後結尾的;很重要！！ */
+
+.news {
+    /* background-color: antiquewhite; */
+    color: black;
+    min-height: 10vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.info {
+    background-color: antiquewhite;
+    max-width: 1000px;
+    width: 100%;
+    margin: 50px auto;
+    /* margin: 30px; */
+    text-align: center;
+    color: grey;
+    font-size: 60px;
+    line-height: 0.3em;
+}
+
+.forwho {
+    /* background-color: aqua; */
+    max-width: 600px;
+    /* 限制最大寬度 */
+    width: 80%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 50px auto;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -6px;
+}
+
+.notes {
+    /* background-color: aquamarine; */
+    max-width: 600px;
+    /* 限制最大寬度 */
+    width: 80%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 50px auto;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -6px;
+
+}
+
+main ol {
+    /* background-color: brown; */
+
+    /* 相對原本位置推移 */
+    position: relative;
+    /* 相對原本位置向左推25px */
+    left: 25px;
+}
+
+.whoknows {
+    /* background-color: brown; */
+    max-width: 600px;
+    /* 限制最大寬度 */
+    width: 80%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 50px auto;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -6px;
+
+}
+
+.runlevel {
+    /* background-color: darkseagreen; */
+    max-width: 600px;
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    /* margin: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+th,
+td {
+    font-size: 18px;
+    height: 50px;
+    padding: 8px;
+    border-top: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    border-left: 2px solid lightgray;
+}
+
+th{
+    background-color: lightgray;
+}
+
+.ending {
+    /* background-color:lightgoldenrodyellow; */
+    max-width: 600px;
+    /* 限制最大寬度 */
+    width: 80%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 50px auto;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -6px red;
+}

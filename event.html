@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>報名場次</title>
+  <link rel="stylesheet" href="./event.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <script src="./bootstrap.bundle.js"></script>
+</head>
+
+<body>
+  <header>
+    <button class="menu">&#9776;</button>
+    <p>Taichung DuKang Alcohol Run</p>
+    <nav>
+      <ul>
+        <li><a href="./dukang.html">關於我們</a></li>
+        <li><a href="./rules.html">路跑規則</a></li>
+        <li><a href="./team.html">團隊成員</a></li>
+        <li><a href="./event.html">報名場次</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 跟置頂列有點距離 -->
+    <div class="news">
+      <p></p>
+    </div>
+
+    <div class="info">
+      <p>🍻 報名場次</p>
+      <hr>
+    </div>
+
+    <div class="infoname">
+      <p>叮叮噹～耶誕路跑</p>
+    </div>
+
+    <div id="apple" data-bs-interval="3000" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#apple" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#apple" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#apple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images 2/聖誕派對照.jpg.jpg" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="./images 2/聖誕跳舞照.jpg.jpg" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="./images 2/聖誕槲寄生.jpg.jpg" class="d-block w-100" alt="">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#apple" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#apple" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- 報名按鈕語法＆js -->
+    <div class="container d-flex justify-content-center align-items-center">
+      <button type="button" class="btn btn-danger" id="popover-btn" data-bs-toggle="popover" title="SORRY"
+        data-bs-content="還沒到開放報名的時間喔！">
+        報名去
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var popoverTrigger = new bootstrap.Popover(document.getElementById('popover-btn'));
+      });
+    </script>
+
+    <!-- 活動資訊 -->
+    <div class="forwho">
+      <p>活動日期：2025年12月24日</p>
+      <p>時間：晚上8:00</p>
+      <p>集合地點：文心森林公園（捷運站出入口，大新國小對面）</p>
+      <p>報名日期：2025年10月21日中午12點</p>
+    </div>
+
+
+    <!-- 頁尾 -->
+    <section class="newsletter">
+      <p>歡迎訂閱電子報，可不定期收到最新資訊！</p>
+      <form>
+        <input type="email" placeholder="請輸入您的 Email" required>
+        <button type="submit">送出</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2025 Taichung DuKang Alcohol Run</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
