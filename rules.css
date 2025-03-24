@@ -21,22 +21,70 @@
     color: grey;
     font-size: 60px;
     line-height: 0.3em;
+
+}
+
+/* 打字機效果 */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.info {
+    /* 字型：使用 Consolas、Monaco、monospace（等寬字體）。大小：200%，放大 2 倍 加粗：bold*/
+    /* font: bold 200% Consolas, Monaco, monospace; */
+    /* 文字顏色為 白色 */
+    /* color: white; */
+    /* 限制 < > 的寬度為 15 個字元（ch，字元單位） */
+    /* width: 15ch; */
+    /* 不換行，確保文字一行顯示。 */
+    white-space: nowrap;
+    /* 讓 < > 可以有寬度控制（與 block 類似，但不會換行）。 */
+    /* display: inline-block; */
+    /* 隱藏超出的文字，配合動畫實現打字機效果 */
+    /* overflow: hidden; */
+    /* 在文字右側添加一條細小的實線邊框（模擬打字機游標） */
+    /* border-right: .05em solid; */
+    /* typing 3s steps(15) → 3 秒內完成打字機效果，逐字顯示（15 個字）
+    caret 1s steps(1) infinite → 1 秒內游標閃爍一次，無限循環 */
+    animation: typing 1.5s steps(15),
+        caret 1s steps(1) infinite;
 }
 
 .forwho {
     /* background-color: aqua; */
-    max-width: 600px;
+    max-width: 800px;
     /* 限制最大寬度 */
     width: 80%;
     /* 預設寬度，讓小螢幕時可以縮小 */
     margin: 50px auto;
     padding: 10px;
     box-shadow: 10px 10px 10px -6px;
+
+    /* 加上淡入動畫 */
+    /* opacity: 0; */
+    /* 初始位置往下偏移 20px */
+    /* transform: translateY(20px);  */
+    /* transition: opacity 0.5s ease, transform 0.5s ease; */
 }
+
+.forwho.show {
+    /* opacity: 1; */
+    /* 移回原位 */
+    /* transform: translateY(0);  */
+}
+
 
 .notes {
     /* background-color: aquamarine; */
-    max-width: 600px;
+    max-width: 800px;
     /* 限制最大寬度 */
     width: 80%;
     /* 預設寬度，讓小螢幕時可以縮小 */
@@ -57,7 +105,7 @@ main ol {
 
 .whoknows {
     /* background-color: brown; */
-    max-width: 600px;
+    max-width: 800px;
     /* 限制最大寬度 */
     width: 80%;
     /* 預設寬度，讓小螢幕時可以縮小 */
@@ -69,11 +117,12 @@ main ol {
 
 .runlevel {
     /* background-color: darkseagreen; */
-    max-width: 600px;
+    max-width: 800px;
     width: 80%;
     margin: 50px auto;
     padding: 10px;
-
+    /* 滑鼠移動到時按鈕放大效果 */
+    transition: 0.5s;
 }
 
 table {
@@ -96,17 +145,45 @@ td {
     border-left: 2px solid lightgray;
 }
 
-th{
+th {
     background-color: lightgray;
 }
 
 .ending {
     /* background-color:lightgoldenrodyellow; */
-    max-width: 600px;
+    max-width: 800px;
     /* 限制最大寬度 */
     width: 80%;
     /* 預設寬度，讓小螢幕時可以縮小 */
     margin: 50px auto;
     padding: 10px;
     box-shadow: 10px 10px 10px -6px red;
+}
+
+
+
+/* 滑鼠移動到時增加效果 */
+.forwho:hover {
+    /* box-shadow: [水平位移] [垂直位移] [模糊程度] [擴散範圍] [顏色]; */
+    /* 10px → 陰影往 右 偏移 10px */
+    /* 10px → 陰影往 下 偏移 10px */
+    /* 5px → 陰影的 模糊程度 */
+    /* rgba(0, 0, 0, 0.8) → 陰影的 顏色（黑色，80% 透明度） */
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.8);
+}
+
+.notes:hover {
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.8);
+}
+
+.whoknows:hover {
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.8);
+}
+
+.runlevel:hover {
+    transform: scale(1.2);
+}
+
+.ending:hover {
+    box-shadow: 10px 10px 5px rgba(255, 0, 0, 0.8);
 }

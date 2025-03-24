@@ -20,19 +20,60 @@
   line-height: 0.2em;
 }
 
-.infoname{
+
+
+.infoname {
   /* background-color: antiquewhite; */
   /* line-height: 0.8em; */
   /* margin: 10px; */
   text-align: center;
   color: black;
   font-size: 40px;
+
+}
+
+/* 打字機效果 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.infoname {
+  justify-content: center;
+  /* 字型：使用 Consolas、Monaco、monospace（等寬字體）。大小：200%，放大 2 倍 加粗：bold*/
+  font: bold 200% Consolas, Monaco, monospace;
+  /* 文字顏色為 白色 */
+  /* color: white; */
+  /* 限制 < > 的寬度為 15 個字元（ch，字元單位） */
+  width: 70ch;
+  /* 不換行，確保文字一行顯示。 */
+  white-space: nowrap;
+  /* 讓 < > 可以有寬度控制（與 block 類似，但不會換行）。 */
+  /* display: inline-block; */
+  /* 隱藏超出的文字，配合動畫實現打字機效果 */
+  overflow: hidden;
+  /* 在文字右側添加一條細小的實線邊框（模擬打字機游標） */
+  border-right: .05em solid;
+  /* typing 3s steps(15) → 3 秒內完成打字機效果，逐字顯示（15 個字）
+  caret 1s steps(1) infinite → 1 秒內游標閃爍一次，無限循環 */
+  animation: typing 1.5s steps(30),
+    caret 1s steps(1) infinite;
   
 }
 
+
 .forwho {
-  max-width: 800px; /* 限制最大寬度 */
-  width: 80%; /* 預設寬度，讓小螢幕時可以縮小 */
+  max-width: 800px;
+  /* 限制最大寬度 */
+  width: 80%;
+  /* 預設寬度，讓小螢幕時可以縮小 */
   margin: 50px auto;
   padding: 10px;
   /* border: double; */
@@ -59,7 +100,7 @@ main {
 /* margin: 0 auto; 會讓 .carousel 水平置中，
 但前提是它的 display 必須是 block，而不是 absolute 或 inline。 */
 .carousel {
-  background-color: #ff6347;
+  /* background-color: #ff6347; */
   display: block;
   margin: 0 auto;
   /* width: 50%; */
@@ -314,7 +355,16 @@ main {
   /* height: 100vh; */
   /* background-color: aqua; */
 
+  /* 滑鼠移動到時按鈕變色效果 */
+  /*transition轉場效果(速度設定0.5秒)*/
+  transition: 0.5s;
 }
+
+/* 滑鼠移動到時按鈕放大效果 */
+.container:hover {
+  transform: scale(1.2);
+}
+
 
 /* 按鈕樣式 */
 #popover-btn {
@@ -324,8 +374,16 @@ main {
   color: white;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   /* 改變游標圖案*/
+  cursor: pointer;
+
+  /*transition轉場效果(速度設定0.5秒)*/
+  transition: 0.5s;
+}
+
+/* 滑鼠移動到時按鈕變色效果 */
+#popover-btn:hover {
+  background-color: red;
 }
 
 /* 彈出框樣式 */
@@ -339,4 +397,14 @@ main {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: none;
+}
+
+/* 響應式設計語法 */
+/* 螢幕寬度小於768像數時啟動 */
+@media screen and (max-width: 768px) {
+
+  .infoname {
+    width: 100%;
+    padding: 40px 0;
+}
 }

@@ -34,6 +34,11 @@
     /* 平滑過渡效果 */
 }
 
+.photos {
+    /* background-color: aqua; */
+    height: 320px;
+}
+
 .photo {
     width: 200px;
     height: 200px;
@@ -43,6 +48,14 @@
     /* border: none; 移除邊框 */
     /* 或者你想要更改邊框顏色 */
     /* border: 3px solid blue; */
+
+    /* 滑鼠移動到時按鈕放大效果 */
+    transition: 0.5s;
+}
+
+/* 滑鼠移動到時按鈕放大效果 */
+.photo:hover {
+    transform: scale(1.2);
 }
 
 
@@ -86,7 +99,36 @@
     padding: 10px;
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
 
+/* 滑鼠移動到時左右搖晃效果 */
+@keyframes swing {
+    15% {
+        transform: translateX(5px);
+    }
+
+    40% {
+        transform: translateX(-5px);
+    }
+
+    65% {
+        transform: translateX(2px);
+    }
+
+    85% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+/* 滑鼠移動到時左右搖晃效果 */
+/* 這裡的範例控制的值為動畫名稱 動畫時間 動畫次數 */
+.shop:hover {
+    animation: swing 1s 1;
 }
 
 
@@ -102,7 +144,7 @@
 
 
 .info p {
-    background-color: chartreuse;
+    background-color: #ede9;
     text-align: center;
     line-height: 2em;
 }
@@ -120,7 +162,7 @@
 }
 
 .team-imagesright img {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     width: 80%;
     padding: 10px;
     box-shadow: 10px 10px 10px -6px black;
@@ -130,7 +172,7 @@
 }
 
 .team-imagesleft img {
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     width: 80%;
     padding: 10px;
     box-shadow: 10px 10px 10px -6px black;

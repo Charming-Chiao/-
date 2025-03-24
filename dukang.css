@@ -3,90 +3,172 @@
 
 .news {
     background-color: antiquewhite;
-    color: white;
-    height: 120vh;
-    background-image: url(./images/何以解憂唯有杜康.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* color: white; */
+    /* height: 200px; */
+    /* background-image: url(./images/何以解憂唯有杜康.jpeg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    max-width: 1000px;
+    /* 限制最大寬度 */
+    width: 100%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 20px auto;
+    animation: fade 6s linear 0s infinite;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.news img {
+    /* 限制最大寬度 */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dukung {
+    /* background-color: aqua; */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    /* 讓內部區塊維持相同高度 */
+    gap: 10px;
+    /* 調整間距 */
+    /* margin: 20px; */
+    /* justify-content: space-between; */
+
+    max-width: 1000px;
+    /* 限制最大寬度 */
+    width: 100%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: auto;
 }
 
-.news h6 {
-    font-size: 15px;
-    margin-top: 90px;
-}
-
-.slogan {
-    background-color: antique;
-    color: grey;
-    height: 250px;
+.dukungphoto {
+    width: 30%;
+    /* 縮小圖片區塊 */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.dukungphoto img {
+    width: 100%;
+    /* 讓圖片填滿 .dukungphoto */
+    height: auto;
+    box-shadow: 10px 10px 10px -6px black;
+
+}
+
+.dukunginfo {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ede9ed; */
     font-size: 20px;
     line-height: 1.8em;
+    color: grey;
 }
 
 .shop {
-    display: flex;
-    
+    /* background-color: burlywood; */
+    background-color: lightgrey;
+    max-width: 900px;
+    /* 限制最大寬度 */
+    width: 80%;
+    /* 預設寬度，讓小螢幕時可以縮小 */
+    margin: 40px auto;
+    padding: 10px;
+
+    /* 加上淡入動畫 */
+    opacity: 0;
+    /* 初始位置往下偏移 20px */
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.shop img {
-    width: 50%;
+.shop.show {
+    opacity: 1;
+    /* 移回原位 */
+    transform: translateY(0);
 }
 
-.info {
-    width: 50%;
+.shopaboutus {
+    /* background-color: aqua; */
+    color: white;
+    font-size: 35px;
+    padding-top: 50px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ede9ed;
+
 }
 
-.info h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
+.shopslogan {
+    /* background-color: brown; */
+    color: white;
+    font-size: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .info p {
-    /* text-align: center;
-    line-height: 2em; */
-    text-align: left;
-}
-
-.product {
-    display: flex;
-    background-color: #ede9ed;
-    justify-content: space-between;
-    justify-items: center;
-    padding: 50px 50px 50px;
-}
-
-.product div {
-    width: 300px;
     text-align: center;
+    line-height: 2em;
+    /* text-align: left; */
 }
 
-.product img {
-    width: 100%;
-    border-radius: 10px;
+.infolilam {
+    /* background-color: aqua; */
+    width: 60%;
 }
 
-.product h3 {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-.product p {
-    font-size: 14px;
-    line-height: 1.6em;
-}
-
-.left-text {
+.infolilam p {
     text-align: left;
+}
+
+.infots {
+    /* background-color: lightpink; */
+}
+
+.infots p {
+    text-align: left;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .shop {
+        /* width: 100%; */
+        /* padding: 40px 0; */
+    }
 }

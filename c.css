@@ -110,24 +110,26 @@ footer p {
     margin: 5px;
 }
 
+/* 漢堡選單 */
 .menu {
     display: none;
 }
 
 /* 響應式設計語法 */
+/* 螢幕寬度小於768像數時啟動 */
 @media screen and (max-width: 768px) {
+
+    /* 隱藏導覽列項目 */
     header ul {
         display: none;
     }
 
-    header h1 {
+    /* 標題移到中央 */
+    header p {
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .news h2 {
-        font-size: 40px;
-    }
 
     .menu {
         display: block;
@@ -135,7 +137,7 @@ footer p {
         color: white;
         font-size: 35px;
         position: absolute;
-        top: 15px;
+        top: 4px;
         left: 20px;
         border: none;
         cursor: pointer;
@@ -154,16 +156,4 @@ footer p {
         padding: 40px 0;
     }
 
-    .info h2 {
-        font-size: 30px;
-    }
-
-    .product {
-        flex-direction: column;
-        padding: 60px 0;
-    }
-
-    .product div {
-        margin-bottom: 30px;
-    }
 }
