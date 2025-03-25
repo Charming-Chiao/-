@@ -150,6 +150,7 @@
 .infolilam {
     /* background-color: aqua; */
     width: 60%;
+    line-height: 3rem;
 }
 
 .infolilam p {
@@ -158,6 +159,7 @@
 
 .infots {
     /* background-color: lightpink; */
+    line-height: 3rem;
 }
 
 .infots p {
