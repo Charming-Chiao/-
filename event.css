@@ -12,12 +12,21 @@
 }
 
 .info {
+  /* background-color: antiquewhite; */
+  /* margin: 30px; */
+  /* text-align: center; */
+  /* color: grey; */
+  /* font-size: 60px; */
+  /* line-height: 0.3em; */
+
   background-color: antiquewhite;
-  margin: 30px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto;
   text-align: center;
   color: grey;
   font-size: 60px;
-  line-height: 0.2em;
+  line-height: 0.1em;
 }
 
 
@@ -65,7 +74,7 @@
   caret 1s steps(1) infinite → 1 秒內游標閃爍一次，無限循環 */
   animation: typing 1.5s steps(30),
     caret 1s steps(1) infinite;
-  
+
 }
 
 
@@ -406,5 +415,5 @@ main {
   .infoname {
     width: 100%;
     padding: 40px 0;
-}
+  }
 }
