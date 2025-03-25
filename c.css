@@ -12,7 +12,8 @@ body {
 } */
 
 header {
-    background-color: #485652;
+    /* background-color: #485652; */
+    background-color: purple;
     height: 60px;
     width: 100%;
     position: fixed;
@@ -55,7 +56,8 @@ header a:hover {
 }
 
 .newsletter {
-    background-color: #485652;
+    /* background-color: #485652; */
+    background-color: purple;
     color: white;
     padding: 60px 0;
     display: flex;

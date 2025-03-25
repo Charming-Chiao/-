@@ -69,7 +69,7 @@
 
 /* 標題 團隊成員 */
 .teamname {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     color: grey;
     height: 20px;
     display: flex;

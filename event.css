@@ -19,7 +19,7 @@
   /* font-size: 60px; */
   /* line-height: 0.3em; */
 
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   max-width: 1000px;
   width: 100%;
   margin: 50px auto;
@@ -60,21 +60,21 @@
 @keyframes example {
   0% {
     transform: translateX(0);
-    background-color: red;
+    background-color: lightpink;
     /* left: 0px; */
     top: 0px;
   }
 
   50% {
     transform: translateX(250px);
-    background-color: green;
+    background-color: lightgreen;
     /* left: 50%; */
     top: 0px;
   }
 
   100% {
     transform: translateX(0);
-    background-color: red;
+    background-color: lightpink;
     /* left: 0px; */
     top: 0px;
   }
