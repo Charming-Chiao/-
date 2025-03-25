@@ -30,63 +30,104 @@
 }
 
 
+.info2{
+  /* background-color: aqua; */
+  max-width: 800px;
+  width: 80%;
+  margin: 50px auto;
+  padding: 10px;
+}
 
 .infoname {
-  /* background-color: antiquewhite; */
-  /* line-height: 0.8em; */
-  /* margin: 10px; */
-  text-align: center;
-  color: black;
-  font-size: 40px;
+  width: 200px;
+  /* height: 100px; */
+  /* background-color: red; */
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
 
+  /* 將寬度縮小到內容的寬度 */
+  width: fit-content;
+  height: 60px;
+  font-size: 40px;
+  color: aliceblue;
+  padding: 10px;
+  
+}
+
+@keyframes example {
+  0% {
+    transform: translateX(0);
+    background-color: red;
+    /* left: 0px; */
+    top: 0px;
+  }
+
+  50% {
+    transform: translateX(250px);
+    background-color: green;
+    /* left: 50%; */
+    top: 0px;
+  }
+
+  100% {
+    transform: translateX(0);
+    background-color: red;
+    /* left: 0px; */
+    top: 0px;
+  }
 }
 
 /* 打字機效果 */
-@keyframes typing {
+/* @keyframes typing {
   from {
     width: 0;
   }
-}
+} */
 
-@keyframes caret {
+/* @keyframes caret {
   50% {
     border-color: transparent;
   }
-}
+} */
 
 .infoname {
-  justify-content: center;
+  /* justify-content: center; */
   /* 字型：使用 Consolas、Monaco、monospace（等寬字體）。大小：200%，放大 2 倍 加粗：bold*/
-  font: bold 250% Consolas, Monaco, monospace;
+  font: bold 200% Consolas, Monaco, monospace;
   /* 文字顏色為 白色 */
   /* color: white; */
   /* 限制 < > 的寬度為 15 個字元（ch，字元單位） */
-  width: 70ch;
+  /* width: 30ch; */
   /* 不換行，確保文字一行顯示。 */
-  white-space: nowrap;
+  /* white-space: nowrap; */
   /* 讓 < > 可以有寬度控制（與 block 類似，但不會換行）。 */
   /* display: inline-block; */
   /* 隱藏超出的文字，配合動畫實現打字機效果 */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* 在文字右側添加一條細小的實線邊框（模擬打字機游標） */
-  border-right: .05em solid;
+  /* border-right: .005em solid; */
   /* typing 3s steps(15) → 3 秒內完成打字機效果，逐字顯示（15 個字）
   caret 1s steps(1) infinite → 1 秒內游標閃爍一次，無限循環 */
-  animation: typing 1.5s steps(30),
-    caret 1s steps(1) infinite;
+  /* animation: typing 1.5s steps(30), */
+  /* caret 1s steps(1) infinite; */
 
 }
 
 
 .forwho {
-  max-width: 800px;
   /* 限制最大寬度 */
-  width: 80%;
+  max-width: 800px;
   /* 預設寬度，讓小螢幕時可以縮小 */
-  margin: 50px auto;
-  padding: 10px;
-  /* border: double; */
-  font-size: 25px;
+  width: 90%;
+  
+  margin: 30px auto;
+  padding: 15px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center; /* 讓內容更整齊 */
   box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1);
 
 }
@@ -413,7 +454,7 @@ main {
 @media screen and (max-width: 768px) {
 
   .infoname {
-    width: 100%;
-    padding: 40px 0;
+    /* width: 100%; */
+    /* padding: 40px 0; */
   }
 }
