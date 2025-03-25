@@ -48,7 +48,7 @@
 .infoname {
   justify-content: center;
   /* 字型：使用 Consolas、Monaco、monospace（等寬字體）。大小：200%，放大 2 倍 加粗：bold*/
-  font: bold 200% Consolas, Monaco, monospace;
+  font: bold 250% Consolas, Monaco, monospace;
   /* 文字顏色為 白色 */
   /* color: white; */
   /* 限制 < > 的寬度為 15 個字元（ch，字元單位） */
